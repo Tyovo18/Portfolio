@@ -59,7 +59,7 @@ button:hover{
 #cv{
     height: 100%;
     width: 100%;
-    scroll-snap-align: end;
+    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,6 +136,8 @@ p{
 
 #lang h4{
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-top:0;
 
 }
 
@@ -171,6 +173,7 @@ td{
     border-radius: 15px;
     font-size: 21px;
     font-weight: bold;
+    
 }
 
 
@@ -179,10 +182,14 @@ thead {
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     font-size: 34px;
-    background-color: white;
+    
     
     /* margin-bottom: 30px; */
     /* padding: 2%; */
+}
+
+th{
+    border-bottom:2px solid black;
 }
 
 
@@ -219,10 +226,11 @@ thead {
 #projets{
     height: 100%;
     width: 100%;
-    scroll-snap-align: end;
+    scroll-snap-align: start;
     
     background-color: #9fe7ea;
     overflow-x: hidden;
+    padding-bottom: 5%;
 
 
 }
@@ -235,6 +243,7 @@ thead {
     padding: 2%;
     margin: 2%;
     background-color: white;
+    border-radius: 15px;
 }
 
 #projets h1{
@@ -275,3 +284,28 @@ section{
     display: flex;
     flex-wrap: wrap;
 }
+
+#contact{
+    height: 100%;
+    width: 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #97f9a9;
+    overflow-x: hidden;
+    
+
+}
+
+#contact h1, #contact p{
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 3%;
+}
+
+#haut{
+    height: fit-content;
+}
+
+
+

@@ -46,14 +46,6 @@ html, body{
     margin-left:3% ;
 }
 
-body{
-    cursor: url('../img/cursor.svg') 16 16,auto;
-
-}
-
-button:hover{
-    cursor: url('../img/cursor2.svg') 16 16, auto;;
-}
 
 
 #cv{
@@ -275,10 +267,8 @@ th{
     font-family: 'Courier New', Courier, monospace;
 }
 
-a:hover{
-    cursor: url('../img/cursor2.svg') 16 16, auto;;
 
-}
+
 
 section{
     display: flex;

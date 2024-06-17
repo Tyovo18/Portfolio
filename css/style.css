@@ -1,10 +1,14 @@
-html, body{
-    height: 100%;
-    width: 100%;
-    margin:0;
-    overflow: hidden;
+html{
+    scroll-behavior: smooth;
+
 }
 
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
 
 
 #bg-wrap{
@@ -17,10 +21,12 @@ html, body{
 }
 
 #accueil{
-    display: flex;
+    
+/*   display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+*/
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -31,14 +37,22 @@ html, body{
 
 
 
-#container{
+#container, .scroll-area{
     width:100% ;
-    height:100%;
-    scroll-snap-type: y mandatory;
-    overflow: auto;
-    overflow-x: hidden;
+    height:100vh;
+    margin: 0 auto;
+    scroll-behavior: smooth;
+  
+}
 
-   
+#container{
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+
+}
+
+.scroll-area{
+    scroll-snap-align: start;
 }
 
 #accueil h1{
@@ -69,8 +83,10 @@ html, body{
 }
 
 svg{
-    overflow:hidden;
-    height: 100%;
+    /* overflow:hidden; */
+    /* height: 100%; */
+    position: fixed;
+    z-index: -1000000;
 }
 
 #cv h1{
@@ -135,19 +151,25 @@ p{
 
 #tab1{
     padding:3%;
-    width:100%;
-    border-collapse: separate; /* Sépare les bordures des cellules */
+    width:90%;
+    border-collapse: separate; /* SÃƒÂ©pare les bordures des cellules */
     border-spacing: 5px; /* Espace entre les cellules */
     background-color: #97f9a9;
-    
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
 }
 
 #tab2{
     padding:3%;
-    width:100%;
-    border-collapse: separate; /* Sépare les bordures des cellules */
+    width:90%;
+    border-collapse: separate; /* SÃƒÂ©pare les bordures des cellules */
     border-spacing: 5px; /* Espace entre les cellules */
     background-color: #f9f797;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
@@ -213,6 +235,17 @@ th{
 #intro{
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 10000;
+    margin-left: auto;
+    /* margin-right: auto; */
+    /* margin-top: auto; */
+    /* margin-bottom: auto; */
+    top: 35%;
+    /* left: 30%; */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #projets{
@@ -228,31 +261,51 @@ th{
 }
 
 .projet{
-    width:40%;
+    width:90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 2%;
-    margin: 2%;
+    margin: 4% 5% 0 5%;
     background-color: white;
     border-radius: 15px;
+}
+
+.desc{
+    display: flex;
+    flex-direction: row;
 }
 
 #projets h1{
     font-family: 'Courier New', Courier, monospace;
     padding-left: 3%;
+    
 }
 
 .projet h2{
     font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 0;
 }
 
+.projet p {
+    font-size: 20px;
+    margin-left: 2% ;
+}
+
+.projet a:hover{
+    font-weight: bold;
+    color:#212121;
+}
+
+.desc img{
+    width:40%;
+}
 
 .mini{
     background-color:#9fe7ea ;
     border-radius: 10px;
     margin-top:1%;
-    
+    margin-bottom: 2%;
 }
 
 .mini p{
@@ -265,6 +318,7 @@ th{
 .projet a{
     color: #318284;
     font-family: 'Courier New', Courier, monospace;
+  
 }
 
 
@@ -298,4 +352,25 @@ section{
 }
 
 
+nav{
+    width:150px;
+    line-height: 80px;
+    height: 100vh;
+}
 
+nav a{
+    text-decoration: none;
+    color: #212121;
+    padding: 30px 25px;
+    font-family: 'Courier New', Courier, monospace;;
+}
+
+#container, .scroll-area{
+    width:100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+nav a:hover{
+    color:#2da8ac;
+}

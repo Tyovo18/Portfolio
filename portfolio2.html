@@ -10,11 +10,29 @@
 
 	</head>
 	<body>
- 
+  <nav>
+    <a href="#accueil">CV</a>
+    <a href="#cv">Profil</a>
+    <a href="#cv2">Compétences</a>
+    <a href="#projets">Projets</a>
+    <a href="#contact">Contact</a>
+  </nav>
     
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+  </script>
    <div id="container">
-    <div id="accueil">
+    <div class="scroll-area" id="accueil">
       <div id="bg-wrap">
+        
         <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
         <defs>
         <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5"><animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop><stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop></radialGradient>
@@ -39,25 +57,26 @@
         <animate attributeName="y" dur="26s" values="0%;-25%;0%" repeatCount="indefinite" />
         <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="19s" repeatCount="indefinite"/>
         </rect>-->
-        <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)"><animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform></rect>
-        <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)"><animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
+        <rect x="13.744%" y="1.18473%" width="50%" height="50%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)"><animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform></rect>
+        <rect x="-2.17916%" y="35.4267%" width="50%" height="50%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)"><animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
         </rect>
-        <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)"><animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate><animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
+        <rect x="9.00483%" y="14.5733%" width="50%" height="50%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)"><animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate><animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
         </rect>
         </svg>
+        <div id="intro">
+          <h1>Je suis <span class="rebond">EMI LIM</span>, future développeuse front-end.</h1>
+          <button class='styled' type="submit" onclick="window.open('CV_Emi_LIM.pdf')">Télécharger mon CV</button>
+          </div>
       </div>
-      <div id="intro">
-      <h1>Je suis <span class="rebond">EMI LIM</span>, future développeuse front-end.</h1>
-      <button class='styled' type="submit" onclick="window.open('CV_Emi_LIM.pdf')">Télécharger mon CV</button>
-      </div>
+      
     </div>
-    <div id="cv">
+    <div class="scroll-area" id="cv">
       <h1>Qui suis-je ?</h1>
       <div id="info">
       <p>Je m'appelle <b>Emi LIM</b> et je suis actuellement <b>étudiante en MMI (Métiers du Multimédia et de l'Internet)</b> à l'IUT Bobigny. Passionnée d'informatique et d'art, j'aime créer et développer des sites web. J'aime également le dessin et la calligraphie. Je n'ai pas énormément d'expériences mais j'espère m'améliorer avec le temps et acquérir plus de compétences en particulier dans le <b>développement front</b>. Je suis une personne <b>créative</b> et <b>autonome</b>. En ce qui me concerne, j'apprécie tout ce qui minimaliste et graphique néanmoins je reste ouverte aux différents styles ce qui me permet de facilement m'adapter aux demandes.  Étant assez <b>polyvalente</b>, je suis capable d’accomplir plusieurs tâches différentes. </p>
       </div>
     </div>
-    <div id="cv2">
+    <div class="scroll-area" id="cv2">
       <div id="lang">
         
         <table id="tab1">
@@ -95,28 +114,39 @@
         </table>
       </div>
     </div>
-    <div id="projets">
-      <h1>Projets :</h1>
+    <div class="scroll-area" id="projets">
       <section>
         <div class="projet">
           <h2>Création d'un site pour une ONG</h2>
-          <img src="img/projet1.png" alt="projet1">
           <div class="mini"><p>HTML/CSS, JavaScript</p></div>
-          <p>Dans ce projet, nous devions développer le site d'une ONG que nous avions créé. Nous étions deux à le développer donc nous nous sommes divisées les pages à faire, Je me suis chargée de la page Accueil et A propos.</p>
-          <a href="https://xiaolatus.github.io/fournir-la-jeunesse/accueil">Voir le site</a>
+          <div class="desc">
+          <img src="img/projet1.png" alt="projet1">
+          <p>Dans ce projet, nous devions développer le site d'une ONG que nous avions créé. Nous étions deux à le développer donc nous nous sommes divisées les pages à faire, Je me suis chargée de la page Accueil et A propos.<br><br>
+          <a href="https://xiaolatus.github.io/fournir-la-jeunesse/accueil">Voir le site</a></p>
+          </div>
         </div>
         <div class="projet">
           <h2>Site en php avec une base de données. </h2>
-          <img src="img/projet2.png" alt="projet2">
           <div class="mini"><p>HTML/CSS, PHP, MySQL</p></div>
-          <p>Pour ce projet une base en php nous a été donnée. Nous devions la modifier car elle contenait des erreurs et l’adapter afin que notre site puisse se distinguer des autres. </p>
-          <a href="http://projets.iut-bobigny.univ-paris13.fr/~lim/StreetFood/">Voir le site</a>
+          <div class="desc">
+          <img src="img/projet2.png" alt="projet2">
+          <p>Pour ce projet une base en php nous a été donnée. Nous devions la modifier car elle contenait des erreurs et l’adapter afin que notre site puisse se distinguer des autres.<br><br>
+          <a href="https://xiaolatus.github.io/fournir-la-jeunesse/accueil">Voir le site</a></p>
+          </div>
         </div>
-        
+        <div class="projet">
+          <h2>Site en php avec une base de données. </h2>
+          <div class="mini"><p>HTML/CSS, PHP, MySQL</p></div>
+          <div class="desc">
+          <img src="img/projet2.png" alt="projet2">
+          <p>Pour ce projet une base en php nous a été donnée. Nous devions la modifier car elle contenait des erreurs et l’adapter afin que notre site puisse se distinguer des autres.<br><br>
+          <a href="https://xiaolatus.github.io/fournir-la-jeunesse/accueil">Voir le site</a></p>
+        </div>        
       </section>
+      <div style="height: 15%;"></div>
 
     </div>
-    <div id="contact">
+    <div class="scroll-area" id="contact">
       <div id="haut">
         <h1>Contact :</h1>
         <p><b>Linkedin :</b> Emi Lim</p>

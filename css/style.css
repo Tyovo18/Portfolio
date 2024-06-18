@@ -60,6 +60,11 @@ body{
     margin-left:3% ;
 }
 
+#accueil p{
+    font-family: 'Courier New', Courier, monospace;
+    margin-left:3% ;
+}
+
 
 
 #cv{
@@ -224,7 +229,7 @@ th{
     border-radius: 10px;
     background-color: #9fe7ea;
     width: fit-content;
-    
+    margin-left: 3%;
     
     box-shadow:
       inset 2px 2px 3px rgba(255, 255, 255, 0.6),

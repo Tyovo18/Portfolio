@@ -512,7 +512,7 @@ ul{
 
     #cv{
         padding-top:3%;
-        display: block;
+        display: flex;
     }
 
     #cv h1{

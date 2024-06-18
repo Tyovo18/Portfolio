@@ -16,11 +16,11 @@
     <div class="retour" onclick="closeMenu()"><img src="img/retour.png"></div>
     
     <ul id="mainNav">
-    <li><a href="#accueil">CV</a></li>
-    <li><a href="#cv">Profil</a></li>
-    <li><a href="#cv2">Compétences</a></li>
-    <li><a href="#projets">Projets</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#accueil" onclick="clickMenu()">CV</a></li>
+    <li><a href="#cv" onclick="clickMenu()">Profil</a></li>
+    <li><a href="#cv2" onclick="clickMenu()">Compétences</a></li>
+    <li><a href="#projets" onclick="clickMenu()">Projets</a></li>
+    <li><a href="#contact" onclick="clickMenu()">Contact</a></li>
   </ul>
   </nav>
     
@@ -34,7 +34,17 @@
         });
     });
     });
+
+    
     menu = document.getElementById("navbar");
+
+    function clickMenu(){
+      var x = window.matchMedia("(max-width: 900px)")
+      if (x.matches) {
+        menu.style.left = "-100%";      
+      }
+
+    }
 
     function openMenu() {
       
@@ -44,6 +54,8 @@
     function closeMenu() {
       menu.style.left = "-100%";
     }
+
+    
 
 
   </script>

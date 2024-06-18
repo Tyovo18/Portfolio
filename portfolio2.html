@@ -3,19 +3,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
 	<head>
 		<meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/logo.ico">
+    
 
 	</head>
 	<body>
   <nav>
-    <a href="#accueil">CV</a>
-    <a href="#cv">Profil</a>
-    <a href="#cv2">Compétences</a>
-    <a href="#projets">Projets</a>
-    <a href="#contact">Contact</a>
+    <ul id="mainNav">
+    <li class="active"><a href="#accueil">CV</a></li>
+    <li><a href="#cv">Profil</a></li>
+    <li><a href="#cv2">Compétences</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
   </nav>
     
   <script>
@@ -29,6 +32,7 @@
     });
 });
   </script>
+
    <div id="container">
     <div class="scroll-area" id="accueil">
       <div id="bg-wrap">
@@ -79,12 +83,12 @@
     <div class="scroll-area" id="cv2">
       <div id="lang">
         
-        <table id="tab1">
+        <table style="overflow-x: auto;" id="tab1">
           <thead><tr><th colspan="8">Front-end et Back-end</th></tr></thead>
-          <tr>
+          <tr class="images">
             <td><img src="img/htmllogo.png" alt="html"></td>
             <td><img src="img/csslogo.png" alt="css"></td>
-            <td><img src="img/phpcode.png" alt="php"></td>
+            <td><img src="img/php.png" alt="php"></td>
             <td><img src="img/javascript.png" alt="java"></td>
             <td><img src="img/sass.png" alt="scss"></td>
             <td><img src="img/react.png" alt="React"></td>
@@ -94,7 +98,7 @@
 
 
           </tr>
-          <tr>
+          <tr class="competences">
             <td><h4>HTML</h4></td>
             <td><h4>CSS</h4></td>
             <td><h4>PHP</h4></td>
@@ -108,13 +112,13 @@
         <br/>
         <table id="tab2">
           <thead><tr><th colspan="4">Logiciels</th></tr></thead>
-          <tr>
+          <tr class="images">
             <td><img src="img/illustrator.png" alt="illustrator"></td>
             <td><img src="img/photo.png" alt="photoshop"></td>
             <td><img src="img/figma.png" alt="figma"></td>
             <td><img src="img/wordpress.png" alt="wordpress"></td>
           </tr>
-          <tr>
+          <tr class="logiciels">
             <td><h4>Illustrator</h4></td>
             <td><h4>Photoshop</h4></td>
             <td><h4>Figma</h4></td>
@@ -145,7 +149,7 @@
         </div>
         <div class="projet">
           <h2>Page 404  </h2>
-          <div class="mini"><p>Twig, PHP, SCSS</p></div>
+          <div class="mini"><p>Twig, PHP, SCSS, JavaScript</p></div>
           <div class="desc">
           <img src="img/page404.png" alt="projet3">
           <p>Dans le cadre de mon stage de 2ème année, on m'a demandé de faire la page 404 du site de l'agence kappel.<br><br>

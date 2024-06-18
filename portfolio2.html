@@ -11,9 +11,12 @@
 
 	</head>
 	<body>
-  <nav>
+  <div class="menu-button" onclick="openMenu()"><img src="img/trois-points.png" alt="menu"></div>
+  <nav id="navbar">
+    <div class="retour" onclick="closeMenu()"><img src="img/retour.png"></div>
+    
     <ul id="mainNav">
-    <li class="active"><a href="#accueil">CV</a></li>
+    <li><a href="#accueil">CV</a></li>
     <li><a href="#cv">Profil</a></li>
     <li><a href="#cv2">Compétences</a></li>
     <li><a href="#projets">Projets</a></li>
@@ -30,7 +33,19 @@
             behavior: 'smooth'
         });
     });
-});
+    });
+    menu = document.getElementById("navbar");
+
+    function openMenu() {
+      
+      menu.style.left = "0";
+    }
+
+    function closeMenu() {
+      menu.style.left = "-100%";
+    }
+
+
   </script>
 
    <div id="container">
@@ -135,7 +150,7 @@
           <div class="desc">
           <img src="img/projet1.png" alt="projet1">
           <p>Dans ce projet, nous devions développer le site d'une ONG que nous avions créé. Nous étions deux à le développer donc nous nous sommes divisées les pages à faire, Je me suis chargée de la page Accueil et A propos.<br><br>
-          <a href="https://xiaolatus.github.io/fournir-la-jeunesse/accueil">Voir le site</a></p>
+          <a href="https://xiaolatus.github.io/fournir-la-jeunesse/accueil" target="_blank">Voir le site</a></p>
           </div>
         </div>
         <div class="projet">
@@ -144,7 +159,7 @@
           <div class="desc">
           <img src="img/projet2.png" alt="projet2">
           <p>Pour ce projet une base en php nous a été donnée. Nous devions la modifier car elle contenait des erreurs et l’adapter afin que notre site puisse se distinguer des autres.<br><br>
-          <a href="https://xiaolatus.github.io/fournir-la-jeunesse/accueil">Voir le site</a></p>
+          <a href="https://xiaolatus.github.io/fournir-la-jeunesse/accueil" target="_blank">Voir le site</a></p>
           </div>
         </div>
         <div class="projet">
@@ -153,7 +168,7 @@
           <div class="desc">
           <img src="img/page404.png" alt="projet3">
           <p>Dans le cadre de mon stage de 2ème année, on m'a demandé de faire la page 404 du site de l'agence kappel.<br><br>
-          <a href="https://kappel.agence-nwb.fr">Voir le site</a></p>
+          <a href="https://kappel.agence-nwb.fr" target="_blank">Voir le site</a></p>
         </div>        
       </section>
       <div style="height: 15%;"></div>

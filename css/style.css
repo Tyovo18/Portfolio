@@ -230,6 +230,11 @@ th{
       inset 2px 2px 3px rgba(255, 255, 255, 0.6),
       inset -2px -2px 3px rgba(224, 221, 221, 0.6);
   }
+
+  .styled:hover{
+    background-color: #212121;
+    color:white;
+  }
   
   
 #intro{
@@ -342,6 +347,9 @@ section{
 
 }
 
+
+
+
 #contact h1, #contact p{
     font-family: 'Courier New', Courier, monospace;
     padding-left: 3%;
@@ -375,8 +383,112 @@ nav a:hover{
     color:#2da8ac;
 }
 
-.styled:hover{
-    background-color: #212121;
-    color:white;
-  }
-  
+
+
+li{
+    list-style: none;
+}
+
+ul{
+    margin:0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        width:100%;
+        position: absolute;  
+        z-index: 999999;   
+        background-color: white ; 
+        left: -100%;
+        
+    }
+
+    table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+    
+
+	
+	td { 
+		/* Behave  like a "row" */
+		
+        border-radius: 0%;
+        width: 20%;
+		position: relative;
+        height:50px;
+		
+	}
+
+    thead{
+        margin-bottom: 5%;
+    }
+
+    #tab1 img, #tab2 img{
+        height:80%;
+        width:auto;
+    }
+	
+    #cv2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+
+    tbody {
+        display:flex;
+
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    .desc{
+        flex-direction: column;
+    }
+
+    .desc img{
+        width: 100%;
+    }
+
+    .projet p{
+        font-size: 16px;
+    }
+	
+    .competences, .logiciels{
+        display: none;
+        
+    }
+
+    #cv{
+        padding-top:3%;
+        display: block;
+    }
+
+    #cv h1{
+        margin-bottom: 0;
+    }
+
+    .images{
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+
+
+}

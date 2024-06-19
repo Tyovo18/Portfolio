@@ -256,16 +256,16 @@ th{
     background-color: #9fe7ea;
     width: fit-content;
     margin-left: 3%;
-    
-    box-shadow:
-      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
-      inset -2px -2px 3px rgba(224, 221, 221, 0.6);
-  }
+    transition: .3s;
 
-  .styled:hover{
-    background-color: #212121;
-    color:white;
-  }
+}
+.styled:hover {
+    box-shadow: 8px 8px #000000;
+    transition: .3s;
+}
+
+  
+
   
   
 #intro{

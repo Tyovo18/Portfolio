@@ -614,4 +614,8 @@ ul{
         align-items: center;
     }
 
+    svg{
+	height:100%;
+    }
+
 }

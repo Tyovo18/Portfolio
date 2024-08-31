@@ -564,8 +564,10 @@ ul{
     }
 
     #cv{
-        padding-top:3%;
         display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding-top: 10%;
     }
 
     #cv h1{

@@ -135,7 +135,7 @@ svg{
 
 
 h3{
-    width: -moz-fit-content;
+    width: fit-content;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -259,7 +259,7 @@ th{
     font-weight: bold;
     border-radius: 10px;
     background-color: #9fe7ea;
-    width: -moz-fit-content;
+    width: fit-content;
     margin-left: 3%;
     transition: .3s;
 
@@ -425,7 +425,7 @@ section{
 }
 
 #haut{
-    height: -moz-fit-content;
+    height: fit-content;
 }
 
 

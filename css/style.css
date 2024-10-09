@@ -46,6 +46,11 @@ body{
     
 }
 
+#imgAccueil img{
+    height: 100px;
+    margin-top: 20px;
+}
+
 
 
 #container, .scroll-area{
@@ -130,7 +135,7 @@ svg{
 
 
 h3{
-    width: fit-content;
+    width: -moz-fit-content;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -254,7 +259,7 @@ th{
     font-weight: bold;
     border-radius: 10px;
     background-color: #9fe7ea;
-    width: fit-content;
+    width: -moz-fit-content;
     margin-left: 3%;
     transition: .3s;
 
@@ -409,8 +414,6 @@ section{
     justify-content: space-between;
     overflow-x: hidden;
 
-    
-
 }
 
 
@@ -422,7 +425,7 @@ section{
 }
 
 #haut{
-    height: fit-content;
+    height: -moz-fit-content;
 }
 
 
@@ -436,7 +439,8 @@ nav a{
     text-decoration: none;
     color: #212121;
     padding: 30px 25px;
-    font-family: 'Courier New', Courier, monospace;;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
 #container, .scroll-area{
@@ -621,6 +625,11 @@ ul{
 
     #intro{
         top:20%;
+    }
+
+    #imgAccueil img{
+        height: 70px;
+        margin-top: 20px;
     }
 
 }

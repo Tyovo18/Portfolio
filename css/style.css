@@ -262,10 +262,6 @@ th{
     transition: .3s;
 
 }
-.styled:hover {
-    box-shadow: 8px 8px #000000;
-    transition: .3s;
-}
 
   
 

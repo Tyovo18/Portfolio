@@ -163,8 +163,7 @@ p{
 
 .rebond {
     display: inline-block;
-    animation: rebondissement 2s ease infinite;
-    animation-delay: 2s;
+
     color: #2da8ac;
 }
 
@@ -625,4 +624,3 @@ ul{
     }
 
 }
-

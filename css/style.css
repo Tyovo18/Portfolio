@@ -163,7 +163,8 @@ p{
 
 .rebond {
     display: inline-block;
-
+    /*animation: rebondissement 2s ease infinite;
+    animation-delay: 2s;*/
     color: #2da8ac;
 }
 
@@ -298,9 +299,19 @@ th{
     position: relative;
     color: #000000;
     text-decoration: none;
-  }
+}
+
+#haut img{
+    height: 80px;
+}
+
+#haut p{
+    display: flex;
+}
+
+
   
-  .hover-underline-animation:after {
+.hover-underline-animation:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -311,12 +322,12 @@ th{
     background-color: #000000;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-  }
+}
   
-  .hover-underline-animation:hover:after {
+.hover-underline-animation:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-  }
+}
 
   
 .projet{

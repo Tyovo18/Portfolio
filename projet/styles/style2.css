@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 header {
 	background-color : rgb(199, 255, 199);
 	
@@ -213,3 +214,220 @@ header nav{
     }
 
 
+=======
+header {
+	background-color : rgb(199, 255, 199);
+	
+	border : solid 1px #CCCCCC;
+    padding: 1%;
+    display:flex;
+    flex-direction: column;
+}
+
+body{
+    margin: 0;
+}
+
+article {
+	
+	border-radius : 10px;
+	border : solid 1px #CCCCCC;
+    
+    margin-top: 2%;
+	flex-grow: 2;
+    padding:1%;
+
+    
+}
+
+
+#pt1{
+    margin-right:2%;
+    margin-left:1%;
+    background-color: rgb(117, 239, 250);
+    display: flex;
+    flex-direction: column;
+
+}
+
+#pt2{
+    background-color: rgb(234, 250, 169);
+    display: flex;
+    flex-direction: column;
+    margin-right:1%;
+
+}
+
+#tuto{
+    padding: 1%;
+    background-color: rgb(255, 194, 230);
+    margin:1%;
+    border-radius : 10px;
+	border : solid 1px #CCCCCC;
+    display: flex;
+    flex-direction: column;
+   
+    
+
+
+}
+
+
+
+
+article img{
+    width:80%;
+    margin-top: 3%;
+    align-self: center;
+    border: 2px solid black;
+    
+}
+
+#cours {
+    display : flex;
+	
+
+	width : 100%;
+    
+
+}
+
+p, h1, h2, h3{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+footer{
+    height: 100px;
+    padding: 2%;
+    background-color:black;
+    margin-top:10%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    
+  }
+  
+
+ #lien ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+  }
+
+  #lien  a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+
+  }
+
+  #lien  li{
+    margin: 1%;
+    
+  }
+
+
+  #lien  li:hover a{
+    color:cadetblue;
+  }
+
+
+
+header  ul {
+    list-style-type: none;
+    
+    background-color: rgb(68, 206, 123);
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin:0;
+    border-style: dashed;
+    border-color: #000;
+
+}
+  
+ header li a {
+    
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    
+}
+  
+ 
+header li a:hover {
+    border-color: #000 ;
+    border-bottom-style: solid;
+    
+}
+
+header nav{
+    width:100%;
+}
+
+@media screen and (max-width:960px){
+    article{
+        width:49%;
+    }
+    footer {
+        width : 100%;
+        flex-direction: column;
+    }
+    }
+
+
+@media screen and (max-width:780px){
+    article{
+        width:95%;
+        
+    }
+
+    #pt1, #pt2{
+        margin-right:1%;
+        margin-left: 1%;
+    }
+
+    footer {
+        width : 100%;
+        flex-direction: column;
+    }
+
+    #cours{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    video{
+        width:400px;
+    }
+
+    header ul {
+
+
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 2%;
+
+    }
+
+    header li{
+        margin:1%;
+
+    }
+
+  
+    }
+
+
+>>>>>>> 50a9e963424efd6c3aea9bf41fc7f11ab236a8b0

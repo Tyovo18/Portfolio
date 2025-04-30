@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
@@ -242,3 +243,249 @@
 </div>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/logo.ico">
+    
+
+	</head>
+	<body>
+  <div class="menu-button" onclick="openMenu()"><img src="img/trois-points.png" alt="menu"></div>
+  <nav id="navbar">
+    <div class="retour" onclick="closeMenu()"><img src="img/retour.png"></div>
+    
+    <ul id="mainNav">
+    <li id="imgAccueil"><a href="#accueil" onclick="clickMenu()"><img src="img/logo.png" alt="CV"/></a></li>
+    <li><a href="#cv" onclick="clickMenu()">Profil</a></li>
+    <li><a href="#cv2" onclick="clickMenu()">Compétences</a></li>
+    <li><a href="#projets" onclick="clickMenu()">Projets</a></li>
+    <li><a href="#contact" onclick="clickMenu()">Contact</a></li>
+  </ul>
+  </nav>
+    
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+    });
+
+    
+    menu = document.getElementById("navbar");
+
+    function clickMenu(){
+      var x = window.matchMedia("(max-width: 900px)")
+      if (x.matches) {
+        menu.style.left = "-100%";      
+      }
+
+    }
+
+    function openMenu() {
+      
+      menu.style.left = "0";
+    }
+
+    function closeMenu() {
+      menu.style.left = "-100%";
+    }
+
+    
+
+
+  </script>
+
+   <div id="container">
+    <div class="scroll-area" id="accueil">
+      <div id="bg-wrap">
+        
+        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+        <defs>
+        <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5"><animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop><stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5"><animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5"><animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5"><animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5"><animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop><stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5"><animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop><stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop></radialGradient>
+        </defs>
+        <!--<rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient4)">
+        <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite" />
+        <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="17s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient5)">
+        <animate attributeName="x" dur="23s" values="0%;-25%;0%" repeatCount="indefinite" />
+        <animate attributeName="y" dur="24s" values="25%;-25%;25%" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="18s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient6)">
+        <animate attributeName="x" dur="25s" values="-25%;0%;-25%" repeatCount="indefinite" />
+        <animate attributeName="y" dur="26s" values="0%;-25%;0%" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="19s" repeatCount="indefinite"/>
+        </rect>-->
+        <rect x="13.744%" y="1.18473%" width="50%" height="50%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)"><animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform></rect>
+        <rect x="-2.17916%" y="35.4267%" width="50%" height="50%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)"><animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
+        </rect>
+        <rect x="9.00483%" y="14.5733%" width="50%" height="50%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)"><animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate><animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
+        </rect>
+        </svg>
+        <div id="intro">
+          <h1>Je suis <span class="rebond">Emi LIM</span>, développeuse front-end.</h1>
+          <p>Je recherche un stage pour une durée de 6 mois en développement front end, avec un rythme d'une semaine en entreprise et une semaine en cours, à partir de mars 2025.</p>
+          <button class='styled' type="submit" onclick="window.open('CV_Emi_LIM.pdf')">Télécharger mon CV</button>
+          </div>
+      </div>
+      
+    </div>
+    <div class="scroll-area" id="cv">
+      <h1>Qui suis-je ?</h1>
+      <div id="info">
+      <p>Je m'appelle <b>Emi LIM</b> et je suis actuellement <b>étudiante en MMI (Métiers du Multimédia et de l'Internet)</b> à l'IUT Bobigny. Passionnée d'informatique et d'art, j'aime créer et développer des sites web. J'aime également le dessin et la calligraphie. Je suis une personne <b>créative</b> et <b>autonome</b>. En ce qui me concerne, j'apprécie tout ce qui minimaliste et graphique néanmoins je reste ouverte aux différents styles ce qui me permet de facilement m'adapter aux demandes.  Étant assez <b>polyvalente</b>, je suis capable d’accomplir plusieurs tâches différentes. </p>
+      </div>
+    </div>
+    <div class="scroll-area" id="cv2">
+      <div id="lang">
+        
+        <table style="overflow-x: auto;" id="tab1">
+          <thead><tr><th colspan="9">Front-end et Back-end</th></tr></thead>
+          <tr class="images">
+            <td><img src="img/htmllogo.png" alt="html"></td>
+            <td><img src="img/csslogo.png" alt="css"></td>
+            <td><img src="img/php.png" alt="php"></td>
+            <td><img src="img/javascript.png" alt="java"></td>
+            <td><img src="img/sass.png" alt="scss"></td>
+            <td><img src="img/react.png" alt="React"></td>
+            <td><img src="img/tailwind.png" alt="Tailwind"></td>
+            <td><img src="img/twig.png" alt="twig"></td>
+            <td><img src="img/mysql.png" alt="mysql"></td>
+            
+
+
+          </tr>
+          <tr class="competences">
+            <td><h4>HTML</h4></td>
+            <td><h4>CSS</h4></td>
+            <td><h4>PHP</h4></td>
+            <td><h4>JavaScript</h4></td>
+            <td><h4>SCSS</h4></td>
+            <td><h4>React</h4></td>
+            <td><h4>Tailwind</h4></td>
+            <td><h4>Twig</h4></td>
+            <td><h4>MySQL</h4></td>
+          </tr>
+        </table>
+        <br/>
+        <table id="tab2">
+          <thead><tr><th colspan="4">Logiciels</th></tr></thead>
+          <tr class="images">
+            <td><img src="img/illustrator.png" alt="illustrator"></td>
+            <td><img src="img/photo.png" alt="photoshop"></td>
+            <td><img src="img/figma.png" alt="figma"></td>
+            <td><img src="img/wordpress.png" alt="wordpress"></td>
+          </tr>
+          <tr class="logiciels">
+            <td><h4>Illustrator</h4></td>
+            <td><h4>Photoshop</h4></td>
+            <td><h4>Figma</h4></td>
+            <td><h4>Wordpress</h4></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="scroll-area" id="projets">
+      <section>
+        <div class="projet">
+          <h2>Stage  </h2>
+          <div class="mini"><p>Twig, PHP, SCSS, JavaScript</p></div>
+          <div class="desc">
+            <img src="img/page404.png" alt="projet3">
+            <p>Dans le cadre de mon stage de 2ème année, on m'a demandé de faire la page 404 du site de l'agence kappel. J'ai également travaillé sur n'animation de cette page et l'animation du footer en général.<br><br>
+            <a href="https://kappel.agence-nwb.fr/tftft" target="_blank">Voir le site</a></p>
+          </div> 
+          <div class="mini"><p>REACT, JavaScript, CSS</p></div>
+          <div class="desc">
+            <img src="img/mail.png" alt="projet3">
+            <p>J'ai aussi eu la chance durant mon stage de créer mon propre REACT Email avec l'aide de mon tuteur de stage. <br><br>
+          </div> 
+        </div>
+        <div class="projet">
+          <h2>Site en php avec une base de données. </h2>
+          <div class="mini"><p>HTML/CSS, PHP, MySQL</p></div>
+          <div class="desc">
+          <img src="img/projet2.png" alt="projet1">
+          <p>Ce site est un projet de première année de BUT MMI et est également le premier site en ligne que j'ai créé. Pour ce projet une base en php nous a été donnée. Nous devions la modifier car elle contenait des erreurs et l’adapter afin que notre site puisse se distinguer des autres.<br><br>
+          <a href="http://projets.iut-bobigny.univ-paris13.fr/~lim/StreetFood/" target="_blank">Voir le site</a></p>
+          </div>
+        </div>
+        <div class="projet">
+          <h2>Création d'un site pour une ONG</h2>
+          <div class="mini"><p>HTML/CSS, JavaScript</p></div>
+          <div class="desc">
+          <img src="img/projet1.png" alt="projet2">
+          <p>Dans ce projet, nous devions développer le site d'une ONG que nous avions créé. Nous étions deux à le développer donc nous nous sommes divisées les pages à faire, Je me suis chargée de la page Accueil et A propos.<br><br>
+          <a href="https://xiaolatus.github.io/fournir-la-jeunesse/accueil" target="_blank">Voir le site</a></p>
+          </div>
+        </div>
+        <div class="projet">
+          <h2>Ghibli</h2> 
+          <div class="mini"><p>HTML/CSS, JavaScript</p></div>
+          <div class="desc">
+          <img src="img/ghibli.png" alt="projet4">
+          <p>Ce site a été réalisé en 2h dans le cadre d'une évaluation en developpement-front en deuxième année de BUT MMI. Le but était de créer un site présentant les différents films Ghibli et en utilisant une bibliothèque en ligne. <br><br>
+          <a href="Ghibli/ghibli.html" target="_blank">Voir le site</a></p>
+        </div>
+        </div> 
+	      <div class="projet">
+          <h2>Rendu développement front</h2> 
+          <div class="mini"><p>HTML/CSS</p></div>
+          <div class="desc">
+            <img src="img/rendu.png" alt="projet5">
+            <p>Ce site a également été réalisé dans le cadre d'une évaluation en developpement-front en deuxième année de BUT MMI. Le but était de créer un site montrant ce qu'on avait appris en cours. <br><br>
+            <a href="projet/index.html" target="_blank">Voir le site</a></p>
+          </div> 
+		
+        </div>
+        <div class="projet">
+          <h2>Portfolio</h2> 
+          <div class="mini"><p>HTML/CSS, JavaScript</p></div>
+          <div class="desc">
+          <img src="img/portfolio.png" alt="projet6">
+          <p>Ce portfolio en ligne sur lequel vous naviguez a commencé à être développé au début de ma deuxième année de BUT MMI et est donc en constante évolution. <br><br>
+          
+        </div> 
+        </div>
+        
+                
+      </section>
+      <div style="height: 15%;"></div>
+
+    </div>
+    <div class="scroll-area" id="contact">
+      <div id="haut">
+        <h1>Contact :</h1>
+        <p><b>Linkedin :</b> <a href="https://www.linkedin.com/in/emi-lim-b69531267/" target="_blank"><img src="img/linkedin.png" alt="logo"></a></p>
+        <p><b>E-mail :</b> <a class="hover-underline-animation " href="mailto:emilim2004@gmail.com">emilim2004@gmail.com</a></p>
+        
+      </div>
+      <div id="bas">
+      <p>© 2024 - LIM Emi | Tous droits réservés</p>
+      </div>
+
+    </div>
+    
+
+</div>
+  </body>
+</html>
+>>>>>>> 50a9e963424efd6c3aea9bf41fc7f11ab236a8b0

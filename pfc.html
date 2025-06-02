@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/logo.ico">
+
+    <style>
+        html, body{
+            height: 100%;
+            margin: 0;
+            width: 100%;
+        }
+        container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: auto;
+            margin-bottom: auto;
+            
+        }
+        .folder{
+
+            width: 30vh;
+            height: 20vh;
+            min-width: 30vh;
+            margin: 10em auto 10em ;
+
+            border-radius: 5px 25px 25px 25px;
+            filter: drop-shadow(0 0 0.75rem grey);
+
+            background: white;
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+            .folder::before{
+            content:  '';
+            position: absolute;
+            top: -2.3vh;
+            width: 30vh;
+            height: 3vh;
+            background: white;
+            border-radius: 25px 0 0 0;
+            clip-path: path('M 0 0 L 160 0 C 185 2, 175 16, 200 18 L 0 50 z');
+            }
+            .folder::after{
+            content: '';
+            position: absolute;
+            left:  5vh;
+            width: 13vh;
+            height: 5px;
+            top: -2.3vh;
+            background: #7036E9;
+            border-radius: 0 0 5px 5px;
+
+        }
+
+        #fold1{
+            background-color: rgb(9, 240, 136);
+        }
+
+        #fold1:hover,#fold2:hover,#fold3:hover{
+            height: 21vh;
+        }
+
+        #fold2{
+            background-color: rgb(84, 121, 244);
+        }
+
+        #fold3{
+            background-color: rgb(243, 66, 222);
+        }
+
+        .openfolder{
+            
+            p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
+                font-size: 2.5vh;
+                text-align: center;
+            }
+        }
+
+    </style>
+    
+
+	</head>
+
+    <body>
+        <container>
+            <div class="folder" id="fold1">
+                <div class="openfolder">
+                    <p>Développement</p>
+                </div>
+
+            </div>
+            <div class="folder" id="fold2">
+                <div class="openfolder">
+                    <p>Entreprendre</p>
+                </div>
+
+            </div>
+            <div class="folder" id="fold3">
+                <div class="openfolder">
+                    <p>Stage</p>
+                </div>
+
+            </div>
+            
+        </container>
+    </body>    
+</html>

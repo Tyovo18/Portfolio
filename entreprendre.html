@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - Entreprendre</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { 
+        background-color: #cfe2f3; 
+        margin: 0; 
+        font-family: Arial, sans-serif; 
+    }
+
+    container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    h1 { 
+        text-align: center; 
+        padding: 20px; 
+
+    }
+    .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    }
+    .card {
+    width: 170px; height: 220px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    padding: 1%;
+    text-align: center;
+    }
+
+    .card:hover { 
+        transform: scale(1.05); 
+    }
+    .modal { 
+        display: none; 
+        position: fixed; 
+        top: 0; left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background: rgba(0,0,0,0.6); 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    .modal-content { 
+        background: white; 
+        padding: 20px; 
+        border-radius: 10px; 
+        max-width: 600px; 
+        text-align: center; 
+    }
+
+    .modal img { 
+        max-width: 100%; 
+        border-radius: 10px; 
+    }
+
+    .close { 
+        float: right; 
+        font-size: 20px; 
+        cursor: pointer; 
+        color: red; 
+    }
+
+    a.back { 
+        display: block; 
+        text-align: center; 
+        margin: 20px; 
+        font-weight: bold; 
+        color: black; 
+        text-decoration: none; 
+    }
+  </style>
+</head>
+<body>
+    <container>
+    <h1>Mes Projets - Entreprendre</h1>
+
+    <div class="projects">
+        <div class="card" onclick="openModal('Startup 1', 'img/start1.png', 'Description de mon projet entrepreneurial 1.')">Projet 1</div>
+        <div class="card" onclick="openModal('Startup 2', 'img/start2.png', 'Description de mon projet entrepreneurial 2.')">Projet 2</div>
+        <div class="card" onclick="openModal('Startup 3', 'img/start3.png', 'Description de mon projet entrepreneurial 3.')">Projet 3</div>
+    </div>
+
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage" src="" alt="Projet">
+        <p id="modalDesc"></p>
+        </div>
+    </div>
+
+    <a href="pfc.html" class="back">← Retour au menu</a>
+    </container>
+
+    <script>
+        function openModal(title, img, desc) {
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalImage").src = img;
+        document.getElementById("modalDesc").innerText = desc;
+        document.getElementById("modal").style.display = "flex";
+        }
+        function closeModal() {
+        document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>

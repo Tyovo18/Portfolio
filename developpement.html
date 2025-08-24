@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio - Développement</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+    body {
+    background-color: #d9ead3;
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    }
+    
+    container{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    h1 { text-align: center; padding: 20px; }
+    .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    }
+    .card {
+    width: 170px; height: 220px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    padding: 1%;
+    text-align: center;
+    }
+    .card:hover { 
+        transform: scale(1.05); 
+    }
+
+    .modal-content {
+    background: white; 
+    padding: 20px; 
+    border-radius: 10px;
+    max-width: 600px; 
+    text-align: center;
+    }
+    .modal img { 
+        max-width: 100%; 
+        border-radius: 10px; 
+    }
+    .close { 
+        float: right; 
+        font-size: 20px; 
+        cursor: pointer; 
+        color: rgb(0, 0, 0); 
+    }
+    a.back { 
+        display: block; 
+        text-align: center; 
+        margin: 20px; 
+        font-weight: bold; 
+        color: black; 
+        text-decoration: none; 
+    }
+
+    .modal {
+        display: none; 
+        position: fixed; 
+        top: 0; left: 0;
+        width: 100%; height: 100%; 
+        background: rgba(0,0,0,0.6);
+        justify-content: center; 
+        align-items: center;
+        animation: fadeIn 0.3s;
+    }
+
+    .modal-content {
+        background: white; 
+        padding: 20px; 
+        border-radius: 10px;
+        max-width: 600px; 
+        width: 90%;
+        max-height: 80%;          
+        overflow-y: auto;         
+        text-align: center;
+        animation: slideIn 0.4s ease-out;
+    }
+
+
+    .modal-content::-webkit-scrollbar {
+        width: 8px;
+    }
+    .modal-content::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 4px;
+    }
+    .modal-content::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .modal img { 
+        max-width: 100%; 
+        border-radius: 10px; 
+        margin: 10px 0;
+    }
+
+    .close { 
+        float: right; 
+        font-size: 30px; 
+        cursor: pointer; 
+        color: rgb(0, 0, 0); 
+    }
+
+    p{
+        font-size: 17px;
+        text-align: left;
+    }
+
+
+
+    @keyframes slideIn {
+        from { transform: translateY(-50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+</style>
+</head>
+<body>
+    <container>
+        <h1>Développement</h1>
+
+        <div class="projects">
+            <div class="card" onclick="openModal('Application Au fil de l\u0027Ourcq', 'img/app.png', 'Dans le cadre du projet SAE501, nous devions créer une application mobile en Flutter/Dart. Le projet visait à concevoir une application autour du canal de l\u0027Ourcq, avec pour objectif de mettre en valeur ce territoire à travers une expérience interactive, culturelle et informative. J\u0027ai développé la page d\u0027accueil, la carte intéractive et mis en commun toutes les page de l\u0027application','Je maîtrise les bases du développement Flutter et la gestion des états dans une application mobile. J’ai su intégrer des éléments graphiques complexes et gérer la navigation.','https:\u002F\u002Fgithub.com\u002FTyovo18\u002FOurcq')">AC33.01 | Développer à l’aide d’un framework de développement côté client</div>
+            <div class="card" onclick="openModal('Page web sémantique Guqin', 'img/guqin.png', 'Projet final développement back web sémantique : Prendre une page sur une thématique de notre choix  dans deux langues puis fabriquer notre chaîne de traitement. J\u0027ai préparer l\u0027environnement, installation des outils nécessaire comme PHP, composer et easyRDF. J\u0027ai fait des recherches, je me suis inspirée de codes trouvés sur internet et ai adapté à mon projet. J\u0027ai écrit le code php et le css.','J’ai acquis une bonne maîtrise des outils serveur et des bibliothèques PHP pour traiter des données RDF. Cependant, l’adaptation des codes tiers et la compréhension de la sémantique web ont été des défis. Je compte approfondir les normes RDF et optimiser le code backend.','https:\u002F\u002Fgithub.com\u002FTyovo18\u002FGuqin')">AC33.02 | Développer à l’aide d’un framework de développement côté serveur</div>
+            <div class="card" onclick="openModal('Jeu de course sur Unity', 'img/app.png', 'Dans le cadre du projet SAE501, nous devions créer une application mobile en Flutter/Dart. Le projet visait à concevoir une application autour du canal de l\u0027Ourcq, avec pour objectif de mettre en valeur ce territoire à travers une expérience interactive, culturelle et informative. J\u0027ai développé la page d\u0027accueil, la carte intéractive et mis en commun toutes les page de l\u0027application','Je maîtrise les bases du développement Flutter et la gestion des états dans une application mobile. J’ai su intégrer des éléments graphiques complexes et gérer la navigation.','https:\u002F\u002Fgithub.com\u002FTyovo18\u002FOurcq')">AC33.03 | Développer des dispositifs interactifs sophistiqués</div>
+            <div class="card" onclick="openModal('Application Au fil de l\u0027Ourcq', 'img/app.png', 'Dans le cadre du projet SAE501, nous devions créer une application mobile en Flutter/Dart. Le projet visait à concevoir une application autour du canal de l\u0027Ourcq, avec pour objectif de mettre en valeur ce territoire à travers une expérience interactive, culturelle et informative. J\u0027ai développé la page d\u0027accueil, la carte intéractive et mis en commun toutes les page de l\u0027application','Je maîtrise les bases du développement Flutter et la gestion des états dans une application mobile. J’ai su intégrer des éléments graphiques complexes et gérer la navigation.','https:\u002F\u002Fgithub.com\u002FTyovo18\u002FOurcq')">AC33.04 | Concevoir et développer des composants logiciels, plugins ou extensions</div>
+            <div class="card" onclick="openModal('Application Au fil de l\u0027Ourcq', 'img/app.png', 'Dans le cadre du projet SAE501, nous devions créer une application mobile en Flutter/Dart. Le projet visait à concevoir une application autour du canal de l\u0027Ourcq, avec pour objectif de mettre en valeur ce territoire à travers une expérience interactive, culturelle et informative. J\u0027ai développé la page d\u0027accueil, la carte intéractive et mis en commun toutes les page de l\u0027application','Je maîtrise les bases du développement Flutter et la gestion des états dans une application mobile. J’ai su intégrer des éléments graphiques complexes et gérer la navigation.','https:\u002F\u002Fgithub.com\u002FTyovo18\u002FOurcq')">AC33.05 | Maîtriser l’hébergement et le déploiement d’applications</div>
+        </div>
+        
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <img id="modalImage" src="" alt="Projet">
+            <h3>Contexte :</h3>
+            <p id="modalDesc"></p>
+            <h3>Niveau atteint :</h3>
+            <p id="modalNiv"></p>
+            <h3>Lien :</h3>
+            <p><a href="" id="modalLien" target="_blank"></a></p>
+            </div>
+        </div>
+
+        <a href="pfc.html" class="back">← Retour au menu</a>
+        
+    </container>
+
+<script>
+    function openModal(title, img, desc, niveau, lien) {
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalImage").src = img;
+    document.getElementById("modalDesc").innerText = desc;
+    document.getElementById("modalNiv").innerText = niveau;
+    document.getElementById("modalLien").innerText = lien;
+    document.getElementById("modalLien").href = lien;
+    document.getElementById("modal").style.display = "flex";
+    }
+    function closeModal() {
+    document.getElementById("modal").style.display = "none";
+    }
+</script>
+</body>
+</html>

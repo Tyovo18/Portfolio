@@ -8,7 +8,7 @@
     body { 
         background-color: #cfe2f3; 
         margin: 0; 
-        font-family: Arial, sans-serif; 
+        font-family: 'Courier New', Courier, monospace;
     }
 
     container {
@@ -44,23 +44,38 @@
     .card:hover { 
         transform: scale(1.05); 
     }
-    .modal { 
+    .modal {
         display: none; 
         position: fixed; 
-        top: 0; left: 0; 
-        width: 100%; 
-        height: 100%; 
-        background: rgba(0,0,0,0.6); 
+        top: 0; left: 0;
+        width: 100%; height: 100%; 
+        background: rgba(0,0,0,0.6);
         justify-content: center; 
-        align-items: center; 
+        align-items: center;
+        animation: fadeIn 0.3s;
     }
 
-    .modal-content { 
+    .modal-content {
         background: white; 
         padding: 20px; 
-        border-radius: 10px; 
+        border-radius: 10px;
         max-width: 600px; 
-        text-align: center; 
+        width: 90%;
+        max-height: 80%;          
+        overflow-y: auto;         
+        text-align: center;
+        animation: slideIn 0.4s ease-out;
+    }
+
+    .modal-content::-webkit-scrollbar {
+        width: 8px;
+    }
+    .modal-content::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 4px;
+    }
+    .modal-content::-webkit-scrollbar-thumb:hover {
+        background: #555;
     }
 
     .modal img { 
@@ -72,7 +87,7 @@
         float: right; 
         font-size: 20px; 
         cursor: pointer; 
-        color: red; 
+        color: rgb(0, 0, 0); 
     }
 
     a.back { 
@@ -83,16 +98,32 @@
         color: black; 
         text-decoration: none; 
     }
+
+    p{
+        font-size: 17px;
+        text-align: left;
+    }
+
+    @keyframes slideIn {
+        from { transform: translateY(-50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
   </style>
 </head>
 <body>
     <container>
-    <h1>Mes Projets - Entreprendre</h1>
+    <h1>Entreprendre</h1>
 
     <div class="projects">
-        <div class="card" onclick="openModal('Startup 1', 'img/start1.png', 'Description de mon projet entrepreneurial 1.')">Projet 1</div>
-        <div class="card" onclick="openModal('Startup 2', 'img/start2.png', 'Description de mon projet entrepreneurial 2.')">Projet 2</div>
-        <div class="card" onclick="openModal('Startup 3', 'img/start3.png', 'Description de mon projet entrepreneurial 3.')">Projet 3</div>
+        <div class="card" onclick="openModal('Application Au fil de l\u0027Ourcq', 'img/app.png', 'Dans le cadre du projet SAE501, nous devions concevoir une application mobile en Flutter/Dart autour du canal de l’Ourcq, afin de mettre en valeur ce territoire à travers une expérience interactive, culturelle et informative. J’ai été en charge de rassembler toutes les pages du projet et de coordonner le travail réalisé par mes co-développeurs. Cette responsabilité m’a amené à prendre une position de coordination technique, à assurer la cohérence globale du produit et à favoriser la communication au sein de l’équipe, tout en jouant un rôle central dans la finalisation de l’application et son bon fonctionnement.','Ce projet m’a permis d’atteindre un niveau me donnant la capacité de piloter la consolidation d’un projet collectif et d’assurer la communication entre les membres de l’équipe. J’ai rencontré des difficultés liées à l’alignement des travaux, que j’ai pu surmonter grâce à des échanges réguliers. Pour progresser, je dois encore améliorer ma maîtrise des outils de gestion agile afin de renforcer mon efficacité dans le pilotage d’équipes et de projets.','https:\u002F\u002Fgithub.com\u002FTyovo18\u002FOurcq')">AC35.01 | Piloter un produit, un service ou une équipe</div>
+        <div class="card" onclick="openModal('Reprise, modification et déploiement d’un projet existant via Git', 'img/musicapp.png', 'Dans le cadre de plusieurs TP, j’ai travaillé sur la reprise, la modification et le déploiement d’un projet existant via Git. L’objectif de ces travaux pratiques était d’apprendre à héberger un projet, à le maintenir et à collaborer efficacement en équipe grâce à Git. J’ai ainsi cloné et repris un projet déjà hébergé, créé des branches pour développer de nouvelles fonctionnalités de manière isolée, réalisé des tests unitaires pour vérifier la stabilité du code, participé à la mise en place de l’intégration continue afin d’automatiser les tests et le déploiement, et contribué au bon déroulement du flux Git (commit, push, merge, résolution de conflits).','Ce projet m’a permis d’atteindre un niveau correspondant à une maîtrise autonome d’un processus qualité complet. J’ai démontré ma capacité à structurer et maintenir un code de qualité, à utiliser Git comme outil de gestion rigoureuse du cycle de vie d’un projet et à mettre en place des outils automatisés pour assurer la fiabilité et la stabilité de l’application. J’ai néanmoins rencontré des difficultés dans l’organisation et la gestion des tâches, ce qui m’a appris l’importance d’un projet bien structuré et d’un nommage rigoureux pour éviter toute confusion. ','https:\u002F\u002Fgithub.com\u002FTyovo18\u002FMusic-App')">AC35.02 | Maîtriser la qualité en projet Web ou multimédia</div>
+        <div class="card" onclick="openModal('Projet lancement d\u0027une laverie connectée', 'img/laverie.png', 'Dans le cadre du module d’Entrepreneuriat (R601), nous avons travaillé en groupe de quatre sur la conception d’un projet fictif de création d’entreprise. Le sujet portait sur le lancement d’une laverie connectée. Nous avons dû réaliser une étude de marché, définir un service innovant, établir le budget nécessaire, réfléchir aux modes de monétisation et concevoir l’identité du projet, tant sur le plan stratégique que sur l’aspect communication.','Ce projet m’a permis de développer une bonne compréhension des différentes étapes de la création d’entreprise, depuis la recherche d’idées et l’analyse du marché jusqu’au positionnement stratégique et à la définition de l’identité de marque. J’ai acquis la capacité à participer activement à la conception d’un projet entrepreneurial complet, en intégrant les dimensions économiques, organisationnelles et marketing. Les difficultés rencontrées, notamment sur l’analyse de marché et les projections financières, ont pu être surmontées grâce au travail collaboratif.','https:\u002F\u002Fwww.canva.com\u002Fdesign\u002FDAGnVetSeNU\u002Fzoj0RcubhJBsVgkpaiGWfw\u002Fedit')">AC35.03 | Concevoir un projet d’entreprise innovante en définissant le nom, l’identité, la forme juridique et le ton de la marque</div>
+        <div class="card" onclick="openModal(' Application Au fil de l\u0027Ourcq', 'img/app.png', 'Dans le cadre du projet SAE501, nous devions concevoir une application mobile en Flutter/Dart autour du canal de l’Ourcq, avec l’objectif de valoriser ce territoire à travers une expérience interactive, culturelle et informative. En tant que développeuse full stack du projet, j’ai mené des recherches sur les technologies à utiliser et j’ai défendu nos choix techniques auprès des clients et du corps enseignant, afin de justifier leur pertinence et de garantir la cohérence du projet.','Cette expérience m’a permis d’atteindre un bon niveau dans l’art de défendre un projet, notamment lors de présentations orales. J’ai su argumenter efficacement autour de nos choix technologiques et rassurer nos interlocuteurs sur leur validité, tout en renforçant progressivement mon aisance à l’oral. J’ai toutefois rencontré des difficultés à trouver les bons termes techniques et à dépasser ma timidité, mais le travail de reformulation et de clarification de mes propos m’a aidée à progresser. Je dois encore m’exercer davantage à l’improvisation, à la gestion des questions inattendues et au storytelling pour rendre mes présentations encore plus percutantes.','https:\u002F\u002Fgithub.com\u002FTyovo18\u002FOurcq')">AC35.04 | Défendre un projet de manière convaincante</div>
     </div>
 
 
@@ -101,7 +132,12 @@
         <span class="close" onclick="closeModal()">&times;</span>
         <h2 id="modalTitle"></h2>
         <img id="modalImage" src="" alt="Projet">
+        <h3>Contexte :</h3>
         <p id="modalDesc"></p>
+        <h3>Niveau atteint :</h3>
+        <p id="modalNiv"></p>
+        <h3>Lien :</h3>
+        <p><a href="" id="modalLien" target="_blank"></a></p>
         </div>
     </div>
 
@@ -109,10 +145,13 @@
     </container>
 
     <script>
-        function openModal(title, img, desc) {
+        function openModal(title, img, desc, niveau, lien) {
         document.getElementById("modalTitle").innerText = title;
         document.getElementById("modalImage").src = img;
         document.getElementById("modalDesc").innerText = desc;
+        document.getElementById("modalNiv").innerText = niveau;
+        document.getElementById("modalLien").innerText = lien;
+        document.getElementById("modalLien").href = lien;
         document.getElementById("modal").style.display = "flex";
         }
         function closeModal() {

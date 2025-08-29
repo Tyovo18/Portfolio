@@ -8,7 +8,7 @@
     body { 
         background-color: #ead1dc; 
         margin: 0; 
-        font-family: Arial, sans-serif;
+        font-family: 'Courier New', Courier, monospace;
     }
 
     container {
@@ -24,7 +24,6 @@
     }
     .projects {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
     padding: 20px;
@@ -44,23 +43,38 @@
     .card:hover { 
         transform: scale(1.05); 
     }
-    .modal { 
+    .modal {
         display: none; 
         position: fixed; 
-        top: 0; left: 0; 
-        width: 100%; 
-        height: 100%; 
-        background: rgba(0,0,0,0.6); 
+        top: 0; left: 0;
+        width: 100%; height: 100%; 
+        background: rgba(0,0,0,0.6);
         justify-content: center; 
-        align-items: center; 
+        align-items: center;
+        animation: fadeIn 0.3s;
     }
 
-    .modal-content { 
+    .modal-content {
         background: white; 
         padding: 20px; 
-        border-radius: 10px; 
+        border-radius: 10px;
         max-width: 600px; 
-        text-align: center; 
+        width: 90%;
+        max-height: 80%;          
+        overflow-y: auto;         
+        text-align: center;
+        animation: slideIn 0.4s ease-out;
+    }
+
+    .modal-content::-webkit-scrollbar {
+        width: 8px;
+    }
+    .modal-content::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 4px;
+    }
+    .modal-content::-webkit-scrollbar-thumb:hover {
+        background: #555;
     }
 
     .modal img { 
@@ -72,7 +86,7 @@
         float: right; 
         font-size: 20px; 
         cursor: pointer; 
-        color: red; 
+        color: rgb(0, 0, 0); 
     }
 
     a.back { 
@@ -84,18 +98,33 @@
         text-decoration: none; 
     }
 
+    p{
+        font-size: 17px;
+        text-align: left;
+    }
+
+    @keyframes slideIn {
+        from { transform: translateY(-50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
 </style>
 </head>
 
 <body>
     <container>
-        <h1>Mes Stages</h1>
+        <h1>Stage</h1>
 
 
         <div class="projects">
-            <div class="card" onclick="openModal('Stage 1', 'img/stage1.png', 'Description du stage 1.')">Stage 1</div>
-            <div class="card" onclick="openModal('Stage 2', 'img/stage2.png', 'Description du stage 2.')">Stage 2</div>
-            <div class="card" onclick="openModal('Stage 3', 'img/stage3.png', 'Description du stage 3.')">Stage 3</div>
+            <div class="card" onclick="openModal('Recensement des tâches automatisées – Analyse et vulgarisation', 'img/redmine.png', 'Dans le cadre du recensement des tâches automatisées sur plusieurs serveurs, j’ai analysé les fichiers crontab, souvent anciens ou peu documentés, ce qui compliquait leur suivi par l’équipe. J’ai recensé chaque tâche, étudié son rôle, sa fréquence, les scripts associés et son impact sur le fonctionnement métier. J’ai structuré et synthétisé mes observations dans un wiki interne sur Redmine accessible à toute la DSI. ','Ce projet m’a permis de développer ma capacité à analyser et organiser des informations complexes. J’ai appris à comprendre des tâches techniques parfois anciennes ou mal documentées, et à les présenter de manière claire pour que toute l’équipe puisse les utiliser. J’ai aussi amélioré ma manière de rédiger pour que mes synthèses soient faciles à lire, même pour des personnes non techniques. Le principal défi a été de comprendre certains scripts, ce qui m’a demandé de tester des hypothèses et de demander des conseils.')">Capacité d’analyse et de synthèse</div>
+            <div class="card" onclick="openModal('Saisie de factures sur Abraxio – Développement de rigueur et de fiabilité', 'img/abraxio.png', 'Dans le cadre de la gestion administrative, j’ai été chargé de saisir des factures dans l’outil interne Abraxio. Bien que cette tâche soit répétitive, elle est essentielle au bon fonctionnement comptable et financier de l’entreprise. J’ai veillé à ce que toutes les informations soient exactes : montants, fournisseurs, dates et libellés. Cette mission m’a permis de développer ma rigueur et ma fiabilité, en apprenant à traiter des données sensibles avec une attention constante aux détails et une gestion efficace du temps.','Ce projet m’a permis d’atteindre un bon niveau de fiabilité dans la saisie et le classement des factures. J’ai compris l’importance des tâches minutieuses et leur impact direct sur la stabilité des processus internes. Au début, j’ai dû apprendre à utiliser le logiciel Abraxio et à comprendre comment classer correctement les factures, ce qui était parfois difficile car certaines informations m’étaient peu familières. Cette expérience m’a appris à travailler rapidement sans perdre en précision.')">Rigueur et fiabilité</div>
+
         </div>
 
         
@@ -104,7 +133,11 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <h2 id="modalTitle"></h2>
             <img id="modalImage" src="" alt="Projet">
+            <h3>Contexte :</h3>
             <p id="modalDesc"></p>
+            <h3>Niveau atteint :</h3>
+            <p id="modalNiv"></p>
+
             </div>
         </div>
 
@@ -112,10 +145,11 @@
     </container>
 
     <script>
-        function openModal(title, img, desc) {
+        function openModal(title, img, desc, niveau) {
         document.getElementById("modalTitle").innerText = title;
         document.getElementById("modalImage").src = img;
         document.getElementById("modalDesc").innerText = desc;
+        document.getElementById("modalNiv").innerText = niveau;
         document.getElementById("modal").style.display = "flex";
         }
         function closeModal() {
